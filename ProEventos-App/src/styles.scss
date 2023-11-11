@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import '../node_modules/bootswatch/dist/cosmo/bootstrap.min.css';
+@import '../node_modules/ngx-toastr/toastr.css';
+@import '../node_modules/ngx-spinner/animations/ball-scale-multiple.css';
+
+
+.card {
+  border-radius: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.btn {
+  border-radius: 0;
+}

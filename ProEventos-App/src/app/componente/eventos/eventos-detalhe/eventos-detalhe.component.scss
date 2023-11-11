@@ -1,0 +1,108 @@
+.iconesSociais {
+  color: rgb(94, 94, 94);
+}
+
+.capitalize {
+  text-transform: capitalize;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  color: silver;
+}
+
+.tab-pane {
+  padding: 20px 8px 8px;
+  border-top: 0px;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  border-left: 1px solid #dee2e6;
+}
+
+.card-evento {
+  position: sticky;
+  --default-height: 25px;
+  top: var(--default-height);
+}
+
+.card-evento-view {
+  position: sticky;
+  top: 10px;
+}
+
+.card-img-block {
+  img {
+    cursor: pointer;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+  }
+}
+
+// Estilos para o formulário
+.card {
+  &.rounded-0 {
+    // Estilos para remover os cantos arredondados
+    border-radius: 0;
+  }
+
+  .card-header {
+    // Estilos para o cabeçalho do cartão
+    border-bottom: 1px solid #ccc;
+  }
+
+  .card-body {
+    // Estilos para o corpo do cartão
+    padding: 15px;
+
+    .form-group {
+      // Estilos para grupos de formulário
+      margin-bottom: 15px;
+
+      label {
+        // Estilos para rótulos
+        font-weight: bold;
+      }
+
+      input.form-control {
+        // Estilos para os campos de entrada
+        // Adicione estilos adicionais conforme necessário
+      }
+
+      .invalid-feedback {
+        // Estilos para mensagens de feedback inválidas
+        color: red;
+        font-size: 12px;
+      }
+    }
+
+    .row {
+      // Estilos para linhas dentro do corpo do formulário
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  .card-footer {
+    // Estilos para o rodapé do cartão
+    padding: 15px;
+
+    .btn {
+      // Estilos para botões
+      &.rounded-0 {
+        border-radius: 0;
+      }
+
+      &.btn-outline-secondary {
+        // Estilos para botões secundários com contorno
+        border-radius: 0;
+
+      }
+
+      &.btn-success {
+        // Estilos para botões de sucesso
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+// Estilos adicionais para outros elementos
+
+

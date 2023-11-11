@@ -1,0 +1,74 @@
+<app-titulo [titulo]="'Perfil' + (ehPalestrante ? ' Palestrante' : '')" [iconClass]="'fa fa-address-card'"></app-titulo>
+<div class="card">
+    <div class="row p-3">
+      <div class="col-lg-3 pt-1">
+        <div class="card mb-3">
+          <div class="">
+            <input type="file" #file (change)="onFileChange($event)" style="display: none;">
+          </div>
+          <div class="d-flex align-self-center pt-3">
+              <img
+              [src]="imagemURL"
+              (click)="file.click()"
+              class="rounded-circle"
+              name="aboutme" width="120" height="120"
+              style="cursor: pointer;">
+          </div>
+          <div class="card-body">
+            <div class="h4 text-center mb-3">@{{usuario.userName}}</div>
+            <div class="h7 text-bold pb-1"><b>Nome:</b> {{usuario.primeiroNome + ' ' + usuario.ultimoNome}}</div>
+            <div class="h7">
+              {{usuario.decricao}}
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-6 text-center border-right">
+                  <div class="h5">0</div>
+                  <div class="h6 text-muted">Meus Eventos Criados</div>
+                </div>
+                <div class="col-6 text-center">
+                  <div class="h5">0</div>
+                  <div class="h6 text-muted">Eventos como {{ ehPalestrante ? 'Palestrante' : 'Participante' }}</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <tabset>
+          <tab class="border border-top-0 p-3">
+            <ng-template tabHeading="">
+              <i class="fa fa-address-card me-2"></i><span>Perfil</span>
+            </ng-template>
+            <app-perfil-detalhe (changeFormValue)="setFormValue($event)"></app-perfil-detalhe>
+          </tab>
+          <tab *ngIf="ehPalestrante" class="border border-top-0 p-3">
+            <ng-template tabHeading="">
+              <i class="fa fa-user me-2"></i><span>Palestrante</span>
+            </ng-template>
+
+            <div class="form-group col-12">
+              <h3 class="border-bottom">Palestrante</h3>
+            </div>
+
+            <app-palestrante-detalhe></app-palestrante-detalhe>
+          </tab>
+          <tab *ngIf="ehPalestrante" class="border border-top-0 p-3">
+            <ng-template tabHeading="">
+              <i class="fa fa-share-square me-2"></i><span>Rede Social</span>
+            </ng-template>
+
+            <div class="form-group col-12">
+              <h3 class="border-bottom">Rede Social</h3>
+            </div>
+
+            <app-redesSociais></app-redesSociais>
+          </tab>
+        </tabset>
+
+  </div>
+</div>
+</div>
